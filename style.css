@@ -1,0 +1,331 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-image: url(https://marketplace.canva.com/EAFOK45-Ww8/1/0/1131w/canva-white-black-minimalist-line-page-border-PHUV1RoRSF4.jpg); */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    
+ 
+}
+
+
+.navbar{
+    background-color:#d0d3d4;
+    padding: 20px;
+    
+}
+
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+   
+    
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+   min-height: 100vh;
+   background-size: cover;
+   background-position: center;
+    padding-top: 80px;
+    gap: 20px;
+   
+}
+.marshy{
+  display: flex;
+  justify-content: center;
+}
+.text-container{
+  width: 650px;
+
+}
+.marshy {
+  width: 35%;
+  justify-content: start;
+
+}
+.hero-section{
+  width: 65%;
+}
+.hero-section .text-container {
+    text-align: start;
+    padding: 15px;
+}
+.logo-img {
+    width: 500px;
+    display: flex;
+    height: auto;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+    border-radius: 18px;
+
+}
+.gallery .card {
+    margin-bottom: 20px;
+    
+}
+.gallery-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; 
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: -100%; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  transition: top 0.3s ease, opacity 0.3s ease; 
+  opacity: 0; 
+}
+
+
+.image-container:hover .overlay,
+.image-container:active .overlay {
+  top: 0; 
+  opacity: 1; 
+}
+
+.overlay-content {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+.btn-contact-overlay  {
+   position: relative;
+  display: inline-block;
+  color: white;
+  padding: 10px 20px; 
+  background-color: black; 
+  text-decoration: none;
+  font-weight: bold;
+  overflow: hidden; 
+  z-index: 1; 
+  transition: color 0.4s ease-in-out; 
+}
+.btn-contact-overlay::before{
+  content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: white;  
+    z-index: -1; 
+    transition: left  0.3s ; 
+}
+
+.btn-contact-overlay:hover {
+  background-color: black; 
+  transform: scale(1.1); 
+}
+.btn-contact-overlay:hover::before {
+  left: 0; 
+ 
+}
+
+
+
+.juice_item{
+    height: 100px;
+    width: 48%;
+    font-weight: bold;
+    
+}
+.opentime {
+    display: flex;
+     padding-top:20px;
+    align-items: center;
+  }
+
+  .left {
+    position: relative;
+   width: 48%;
+  }
+
+  .left img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .btn-animate {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: white; 
+    text-decoration: none;
+    font-weight: bold;
+    overflow: hidden; 
+    z-index: 1; 
+    transition: color 0.4s ease-in-out; 
+  }
+  
+  .btn-animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100%;
+    background-color: black;  
+    z-index: -1; 
+    transition: left  0.3s ; 
+  }
+  .btn-animate:hover::before {
+    left: 0; 
+   
+  }
+  
+  .btn-animate:hover {
+    color: white; 
+  }
+
+.marshy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+  transition: transform 0.8s ease-in-out;
+  transform-origin: left;
+  transform: scaleX(0); 
+}
+.marshy img {
+  position: relative;
+  transition: transform 1s ease-in-out; 
+
+}
+
+
+@keyframes moveUpAndDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo-img {
+  animation: moveUpAndDown 2s ease-in-out infinite; /* 2-second cycle, infinite loop */
+}
+
+
+
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .right {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #666;
+    width: 48%;
+  }
+
+  .right h1 {
+    font: size 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  #time{
+    padding: 3px;
+  }
+
+  .right .day {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 576px) {
+    .hero-section {
+       flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+    }
+    .text-container{
+      width: auto;
+    
+    }
+    .marshy{
+      justify-content: center;
+    }
+    
+    /* .text-container, .marshy {
+        width: 100;
+    } */
+     #hero{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+     }
+    
+    #menu{
+      padding: 0;
+      
+    }
+    
+    .juice_item {
+        width: 100%;
+        padding: 0px;
+        justify-content: space-between;
+    }
+    
+    .opentime {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .left, .right {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+}
+  
